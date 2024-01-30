@@ -1,6 +1,6 @@
 var nilai = prompt ("Masukan Nilai Kamu Manis");
 if (nilai <= 10 ) {
-    alert(nilai + " " + "Nilai Kamu Ga Ada Tolol, Ga Usah Sekolah");
+    alert(nilai + " " + "Nilai Kamu Ga Ada, Udah Ga Usah Sekolah");
 
 } else if (nilai <= 10 && nilai >= 39) {
     alert(nilai + " " + "Nilai Kamu : E, HARUS BANGET SEMANGAT");

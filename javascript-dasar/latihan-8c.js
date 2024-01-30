@@ -1,25 +1,42 @@
-function getPilihanKomputer() {
-  const komputer = Math.random();
+var pilihanUser = prompt("Apakah kamu gajah, orang, atau semut?");
+var pilihanComputer = Math.random();
 
-  if (komputer < 0.34) return "gajah";
-  if (komputer >= 0.34 && komputer < 0.67) return "orang";
-  return "semut";
+if (pilihanComputer < 0.34) {
+  pilihanComputer = "gajah";
+} else if (pilihanComputer <= 0.67) {
+  pilihanComputer = "orang";
+} else {
+  pilihanComputer = "semut";
 }
 
-function getHasil(user, komputer) {
-  if (user == komputer) return "SERI!";
-  if (user == "gajah") return komputer == "orang" ? "MENANG!" : "KALAH!";
-  if (user == "orang") return komputer == "semut" ? "MENANG!" : "KALAH!";
-  if (user == "semut") return komputer == "gajah" ? "MENANG!" : "KALAH!";
-  return "Pilihan tidak valid! Silakan pilih gajah, orang, atau semut.";
+function bandingkanPilihan(user, computer) {
+  if (user === computer) {
+    return "Hasilnya seri";
+  } else if (
+    (user === "gajah" && computer === "orang") ||
+    (user === "orang" && computer === "semut") ||
+    (user === "semut" && computer === "gajah")
+  ) {
+    return "Kamu menang!";
+  } else {
+    return "Komputer menang!";
+  }
 }
 
-function suitJawa() {
-  const user = prompt("Pilih: gajah, orang, atau semut?").toLowerCase();
-  const komputer = getPilihanKomputer();
-  const hasil = getHasil(user, komputer);
-
-  alert(`Kamu memilih ${user}, komputer memilih ${komputer}.\nHasil: ${hasil}`);
+if (
+  pilihanUser === "gajah" ||
+  pilihanUser === "orang" ||
+  pilihanUser === "semut"
+) {
+  var hasil = bandingkanPilihan(pilihanUser, pilihanComputer);
+  alert(
+    "Kamu memilih: " +
+      pilihanUser +
+      "\nKomputer memilih: " +
+      pilihanComputer +
+      "\n\n" +
+      hasil
+  );
+} else {
+  alert("Minimal Milih KAK!!!!!! Gimana Mau Main");
 }
-
-suitJawa();

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="teksLama">Lorem ipsum dolor sit amet.</p>
+    <p>Masukan Teks Baru :</p>
+    <input type="text" id="input" />
+    <br />
+    <input type="button" onclick="ubah()" value="ubah teks" />
+
+    <script>
+      function ubah() {
+        var input = document.getElementById("input").value;
+        document.getElementById('teksLama').innerHTML = input;
+      }
+    </script>
+  </body>
+</html>
