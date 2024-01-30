@@ -6,14 +6,3 @@ console.log(lemari[1]);
 lemari[3] = "ktp";
 lemari.push("ATM");
 console.log(lemari);
-alert("")
-alert("")
-alert("")
-alert("")
-alert("")
-alert("")
-alert("")
-alert("")
-alert("")
-alert("")
-alert("")
